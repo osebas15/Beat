@@ -10,6 +10,7 @@
 		9ECEE48F212F339800804635 /* Beat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECEE485212F339700804635 /* Beat.framework */; };
 		9ECEE494212F339800804635 /* BeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEE493212F339800804635 /* BeatTests.swift */; };
 		9ECEE496212F339800804635 /* Beat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECEE488212F339700804635 /* Beat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ECEE4A0212F983F00804635 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEE49F212F983F00804635 /* Beat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9ECEE48E212F339800804635 /* BeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECEE493212F339800804635 /* BeatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatTests.swift; sourceTree = "<group>"; };
 		9ECEE495212F339800804635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ECEE49F212F983F00804635 /* Beat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9ECEE487212F339700804635 /* Beat */ = {
 			isa = PBXGroup;
 			children = (
+				9ECEE49F212F983F00804635 /* Beat.swift */,
 				9ECEE488212F339700804635 /* Beat.h */,
 				9ECEE489212F339700804635 /* Info.plist */,
 			);
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					9ECEE484212F339700804635 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					9ECEE48D212F339800804635 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ECEE4A0212F983F00804635 /* Beat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,7 @@
 		9ECEE49A212F339800804635 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SC.Beat;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		9ECEE49B212F339800804635 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +397,7 @@
 		9ECEE49D212F339800804635 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3WHD4AVVY;
 				INFOPLIST_FILE = BeatTests/Info.plist;
@@ -407,6 +416,7 @@
 		9ECEE49E212F339800804635 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3WHD4AVVY;
 				INFOPLIST_FILE = BeatTests/Info.plist;
