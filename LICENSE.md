@@ -1,3 +1,5 @@
+Version 1.0
+
 MIT License
 
 Copyright (c) 2018 Sebastian Aguirre
