@@ -4,14 +4,14 @@ Pod::Spec.new do |s|
 s.platform = :ios
 s.ios.deployment_target = '9.0'
 s.name = "Beat"
-s.summary = "Periodic asyncr"
+s.summary = "Periodic asyncronous manager"
 s.requires_arc = true
 
 # 2
 s.version = "0.0.1"
 
 # 3
-s.license = { :type => "MIT", :file => "LICENSE" }
+s.license = "MIT"
 
 # 4 - Replace with your name and e-mail address
 s.author = { "Sebastian Aguirre" => "osebas15@gmail.com" }
