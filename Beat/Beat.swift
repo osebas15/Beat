@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Beat {
+open class Beat {
     
-    var action : ()->() = {}
+    public var action : ()->() = {}
     
-    var numberOfActions : Int
+    public var numberOfActions : Int
     
     let queue : DispatchQueue
     
@@ -22,7 +22,7 @@ class Beat {
     
     private var _on = false
     
-    var on:Bool{
+    public var on:Bool{
         set{
             if !_on && newValue{
                 _on = newValue
@@ -35,11 +35,11 @@ class Beat {
         }
     }
     
-    required init(queue: DispatchQueue = DispatchQueue.main,
-                  delay: Double = 0.5,
-                  startDate: Date = Date(),
-                  numberOfActions: Int = -1,
-                  action: @escaping ()->() = {}) {
+    required public init(queue: DispatchQueue = DispatchQueue.main,
+                         delay: Double = 0.5,
+                         startDate: Date = Date(),
+                         numberOfActions: Int = -1,
+                         action: @escaping ()->() = {}) {
         self.queue = queue
         self.delay = delay
         self.startDate = startDate
@@ -52,15 +52,16 @@ class Beat {
         if numberOfActions != 0 && on{
             self.action()
             let popTime = DispatchTime.now() + Double(delay)
-        
+            
             numberOfActions -= 1
             
             queue.asyncAfter(deadline: popTime,
-                                        execute:
-            {
-                self.runningAction()
+                             execute:
+                {
+                    self.runningAction()
             })
             
         }
     }
 }
+
